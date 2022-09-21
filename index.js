@@ -5,8 +5,11 @@ function newImage(url) {
   return image;
 }
 
-let greenCharacter = newImage("assets/green-character.gif");
-move(greenCharacter, 100, 250);
+// let greenCharacter = newImage("assets/green-character.gif");
+// move(greenCharacter, 100, 250);
+
+move(newImage("assets/green-character.gif")).to(100, 250);
+
 
 // function newImage(url, left, bottom){
 //     let image = document.createElement('img')
@@ -25,10 +28,23 @@ move(greenCharacter, 100, 250);
 // newImage("assets/crate.png", 150, 350);
 // newImage("assets/well.png", 500, 575);
 
-function move(image, left, bottom) {
+// function move(image, left, bottom) {
+//   image.style.position = "fixed";
+//   image.style.left = left + "px";
+//   image.style.bottom = bottom + "px";
+// }
+
+function move(image) {
   image.style.position = "fixed";
-  image.style.left = left + "px";
-  image.style.bottom = bottom + "px";
+
+  function moveToCoordinates(left, bottom) {
+    image.style.left = left + "px";
+    image.style.bottom = bottom + "px";
+  }
+
+  return {
+    to: moveToCoordinates,
+  };
 }
 
 function newItem(url, left, bottom) {
