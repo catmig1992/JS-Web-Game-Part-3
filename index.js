@@ -39,14 +39,14 @@ move(newImage("assets/well.png")).to(500, 575);
 // newImage("assets/well.png", 500, 575);
 
 // Define a new function to accept left and bottom parameters within the move function
-function move(image) {
-  image.style.position = "fixed";
+function move(element) {
+  element.style.position = "fixed";
   //   image.style.left = left + "px";
   //   image.style.bottom = bottom + "px";
 
   function moveToCoordinates(left, bottom) {
-    image.style.left = left + "px";
-    image.style.bottom = bottom + "px";
+    element.style.left = left + "px";
+    element.style.bottom = bottom + "px";
   }
   return {
     to: moveToCoordinates,
@@ -54,6 +54,7 @@ function move(image) {
 }
 // Next, move lines 3 and 4 where left and bottom are in scope
 // Call moveToCoordinates, call it right after we call move, to provide the coordinates for moving the image
+// Bonus: change image to element
 
 function newItem(url, left, bottom) {
   let item = newImage(url, left, bottom);
@@ -76,9 +77,9 @@ move(newItem("assets/staff.png")).to(600, 250);
 
 function newInventory() {
   let inventory = document.createElement("div");
-  inventory.style.position = "fixed";
-  inventory.style.bottom = "0px";
-  inventory.style.left = "0px";
+  //   inventory.style.position = "fixed";
+  //   inventory.style.bottom = "0px";
+  //   inventory.style.left = "0px";
   inventory.style.width = "100%";
   inventory.style.height = "100px";
   inventory.style.display = "flex";
@@ -93,4 +94,5 @@ function newInventory() {
 
 const inventory = newInventory();
 
-// move(inventory).to(0, 0);
+// Bonus: write inventory as move and to functions
+move(inventory).to(0, 0);
