@@ -38,8 +38,12 @@ function move(image) {
     image.style.left = left + "px";
     image.style.bottom = bottom + "px";
   }
+  return {
+    to: moveToCoordinates,
+  };
 }
 // Next, move lines 3 and 4 where left and bottom are in scope
+// Call moveToCoordinates, call it right after we call move, to provide the coordinates for moving the image
 
 function newItem(url, left, bottom) {
   let item = newImage(url, left, bottom);
