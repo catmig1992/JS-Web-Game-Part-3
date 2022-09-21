@@ -9,11 +9,11 @@ function newImage(url) {
 }
 
 // Define a new function named move
-function move(image, left, bottom) {
-  image.style.position = "fixed";
-  image.style.left = left + "px";
-  image.style.bottom = bottom + "px";
-}
+// function move(image, left, bottom) {
+//   image.style.position = "fixed";
+//   image.style.left = left + "px";
+//   image.style.bottom = bottom + "px";
+// }
 // Next, copy and paste the positioning logic in the move function
 // The move function should receive the image, left, and bottom as parameters for different images
 
@@ -27,6 +27,19 @@ newImage("assets/pillar.png", 350, 250);
 newImage("assets/pine-tree.png", 450, 350);
 newImage("assets/crate.png", 150, 350);
 newImage("assets/well.png", 500, 575);
+
+// Define a new function to accept left and bottom parameters within the move function
+function move(image) {
+  image.style.position = "fixed";
+  //   image.style.left = left + "px";
+  //   image.style.bottom = bottom + "px";
+
+  function moveToCoordinates(left, bottom) {
+    image.style.left = left + "px";
+    image.style.bottom = bottom + "px";
+  }
+}
+// Next, move lines 3 and 4 where left and bottom are in scope
 
 function newItem(url, left, bottom) {
   let item = newImage(url, left, bottom);
