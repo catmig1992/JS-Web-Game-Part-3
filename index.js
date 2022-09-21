@@ -9,12 +9,13 @@ function newImage(url) {
 }
 
 // Define a new function named move
-function move() {
+function move(image, left, bottom) {
   image.style.position = "fixed";
   image.style.left = left + "px";
   image.style.bottom = bottom + "px";
 }
 // Next, copy and paste the positioning logic in the move function
+// The move function should receive the image, left, and bottom as parameters for different images
 
 newImage("assets/green-character.gif", 100, 250);
 newImage("assets/tree.png", 200, 450);
