@@ -18,10 +18,12 @@ function newImage(url) {
 // The move function should receive the image, left, and bottom as parameters for different images
 
 // Next, pass the image that newImage returns into move
-let greenCharacter = newImage("assets/green-character.gif");
+// let greenCharacter = newImage("assets/green-character.gif");
 // move(greenCharacter, 100, 250);
 // Next, separate move function and to function for coordinates
-move(greenCharacter).to(100, 250);
+// move(greenCharacter).to(100, 250);
+// Next, consolidate code to one line
+move(newImage("assets/green-character.gif")).to(100, 250);
 // newImage("assets/green-character.gif", 100, 250);
 
 newImage("assets/tree.png", 200, 450);
