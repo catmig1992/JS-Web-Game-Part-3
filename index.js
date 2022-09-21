@@ -98,3 +98,20 @@ const inventory = newInventory();
 move(inventory).to(0, 0);
 
 // Try to make the append method available outside of newInventory without making the whole div element available
+// document.body.append(inventory);
+// Is there another way we could make that append method available outside of newInventory without making the whole div element available?
+// Not sure how to move the items to only a small portion of the div
+// Create a move function and to function in a smaller portion of the div
+// function move(collection) {
+//   collection.style.position = "fixed";
+
+//   function moveToInventory(left, bottom) {
+//     collection.style.left = left + "px";
+//     collection.style.bottom = bottom + "px";
+//   }
+//   return {
+//     to: moveToInventory,
+//   };
+// }
+
+// move(document.body.append(inventory)).to(50, 50);
