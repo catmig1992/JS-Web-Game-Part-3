@@ -56,8 +56,8 @@ function move(element) {
 // Call moveToCoordinates, call it right after we call move, to provide the coordinates for moving the image
 // Bonus: change image to element
 
-function newItem(url, left, bottom) {
-  let item = newImage(url, left, bottom);
+function newItem(url) {
+  let item = newImage(url);
   item.addEventListener("click", () => {
     item.remove();
     let inventoryItem = document.createElement("img");
@@ -96,3 +96,5 @@ const inventory = newInventory();
 
 // Bonus: write inventory as move and to functions
 move(inventory).to(0, 0);
+
+// Try to make the append method available outside of newInventory without making the whole div element available
